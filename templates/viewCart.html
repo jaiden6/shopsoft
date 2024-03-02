@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title>Cart</title>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			h1{text-align: center;}
+			h2{text-align: center;}
+			p{text-align: center;}
+		</style>
+	</head>
+	<body>
+		<h1><a href=/catalog/>Home</a></h1>
+		{% for ID, name in itemDict.items() %}
+			<a href=../item/{{ID}}/>{{name}}</a><br>
+		{% endfor %}
+		</p>
+        <form action="" method="post">
+            <input class="btn btn-default" type="submit" value="Check Out">
+        </form>
+	</body>
+</html>

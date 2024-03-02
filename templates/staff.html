@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title>index</title>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			h1{text-align: center;}
+			h2{text-align: center;}
+			p{text-align: center;}
+		</style>
+	</head>
+	<body>
+		<h1>Home</h1>
+		<h2><a href=/message/>Send a Message</a></h2>
+		<h2><a href=/inbox/>View Your Inbox</a></h2>
+		<h2><a href=/inventory/>Update Inventory</a></h2>
+		<h2><a href=/customerinfo/>Access Customer Information</a></h2>
+		<h1>Catalog:</h1><p>
+		{% for ID, name in itemDict.items() %}
+			<a href=../item/{{ID}}>{{name}}</a> <a href=../item/{{ID}}/like>Like</a><br>
+		{% endfor %}
+		</p>
+	</body>
+</html>

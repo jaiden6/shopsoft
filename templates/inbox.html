@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title>Inbox</title>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			h1{text-align: center;}
+			h2{text-align: center;}
+			p{text-align: center;}
+		</style>
+	</head>
+	<body>
+		<h1><a href=/staff/>Staff Home</a></h1>
+		<h1><a href=/catalog/>Customer Home</a></h1>
+		<h2>Inbox:</h2>
+		{% for row in inbox %}
+			<a href=../message/{{row[0]}}/>{{row[1]}} ({{row[2]}}): {{row[3]}}</a><br>
+		{% endfor %}
+		</p>
+	</body>
+</html>

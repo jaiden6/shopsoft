@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>index</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+<h1><a href=/catalog/>Home</a></h1>
+
+<h2>{{name}}</h2>
+<p>Price: ${{price}}</p>
+
+
+{% if description %}
+<p> Description: {{description}} </p>
+{% endif %}
+
+{% for imageURL in imageURLs %}
+
+<img src={{imageURL}} height="256">
+
+{% endfor %}
+
+<hr>
+
+<form action="" method="post">
+<div class="input-group quantity-selector">
+<label for="selector">Quantity:</label>
+<input type="number" id="inputQuantitySelector" class="form-control" aria-live="polite" data-bs-step="counter" name="quantity" title="quantity" value="1" min="1" max="999" step="1" data-bs-roun="0" aria-label="Quantity selector">
+</div>
+
+<div>
+<input type="submit" value="Add to Cart" />
+<a href="like/">Like Item</a>
+</div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title>index</title>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<form action="" method="post">
+			<input type="email" placeholder="Email" name="email" value="{{request.form.email}}"><input type="password" placeholder="Password" name="password" value="{{request.form.password}}"><br>
+			<input type="text" placeholder="Name" name="name" value="{{request.form.name}}"><br>
+			<input type="text" placeholder="Address" name="address" value="{{request.form.address}}"><br>
+			<input type="tel" placeholder="Postal Code" name="postalCode" value="{{request.form.postalCode}}"><br>
+			<input type="tel" placeholder="Phone Number" name="phone" value="{{request.form.phone}}"><br>
+			<input class="btn btn-default" type="submit" value="Register">
+		</form>
+		<a href="..">Login</a>
+		{% if error %}
+		<p><strong>Error: </strong>{{error}}</p>
+		{% endif %}
+	</body>
+</html>

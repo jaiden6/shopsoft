@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title>index</title>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<form action="" method="post">
+			<input type="tel" placeholder="Item ID" name="itemID" value="{{request.form.itemID}}"><input type="text" placeholder="Item Name" name="itemName" value="{{request.form.itemName}}"><br>
+			<input type="text" placeholder="Description" name="description" value="{{request.form.description}}"><br>
+			<input type="number" placeholder="Price Per Unit" name="price" value="{{request.form.price}}"><br>
+			<input type="tel" placeholder="Quantity" name="quantity" value="{{request.form.quantity}}"><br>
+			<input class="btn btn-default" type="submit" value="Submit Changes">
+		</form>
+		{% if error %}
+		<p><strong>Error: </strong>{{error}}</p>
+		{% endif %}
+		<a href="/staff/">Home</a>
+	</body>
+</html>

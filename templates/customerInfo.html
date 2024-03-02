@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title>index</title>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			h1{text-align: center;}
+			h2{text-align: center;}
+			p{text-align: center;}
+		</style>
+	</head>
+	<body>
+		<h1><a href=/staff/>Home</a></h1>
+		<h1>Customers:</h1><p>
+		{% for row in table %}
+			<p>Email: {{row[0]}}</p>
+            <p>Name: {{row[1]}}</p>
+            <p>Address: {{row[2]}} {{row[3]}}</p>
+            <p>Phone: {{row[4]}}</p>
+            <br>
+		{% endfor %}
+		</p>
+	</body>
+</html>
